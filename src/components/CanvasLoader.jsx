@@ -1,5 +1,5 @@
-import { Html, useProgress } from "@react-three/drei";
-
+import { Html } from "@react-three/drei";
+import { ProgressSpinner } from "primereact/progressspinner";
 const CanvasLoader = () => {
   return (
     <Html
@@ -12,8 +12,9 @@ const CanvasLoader = () => {
         alignItems: "center",
       }}
     >
-      <span>Loading</span>
+      <ProgressSpinner />
     </Html>
+    // Html este un container pentru elemente html in scena 3d
   );
 };
 

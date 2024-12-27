@@ -3181,13 +3181,13 @@ const Desk = (props) => {
                   rotation={[-3.126, -0.141, 1.415]}
                   scale={[13.688, 12.608, 12.608]}
                 >
-                  <mesh
+                  {/* <mesh
                     name="Bat001_Dark_0"
                     castShadow
                     receiveShadow
                     geometry={nodes.Bat001_Dark_0.geometry}
                     material={materials.Dark}
-                  />
+                  /> */}
                 </group>
                 <group
                   name="Bat002"
@@ -3195,13 +3195,13 @@ const Desk = (props) => {
                   rotation={[-3.099, 0.273, 1.03]}
                   scale={[12.014, 8.779, 8.779]}
                 >
-                  <mesh
+                  {/* <mesh
                     name="Bat002_Dark_0"
                     castShadow
                     receiveShadow
                     geometry={nodes.Bat002_Dark_0.geometry}
                     material={materials.Dark}
-                  />
+                  /> */}
                 </group>
                 <group
                   name="Bat003"
@@ -3209,13 +3209,13 @@ const Desk = (props) => {
                   rotation={[-0.033, 0.127, -2.039]}
                   scale={[13.688, 12.608, 12.608]}
                 >
-                  <mesh
+                  {/* <mesh
                     name="Bat003_Dark_0"
                     castShadow
                     receiveShadow
                     geometry={nodes.Bat003_Dark_0.geometry}
                     material={materials.Dark}
-                  />
+                  /> */}
                 </group>
                 <group
                   name="Lantern"

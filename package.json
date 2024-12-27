@@ -12,11 +12,15 @@
   "dependencies": {
     "@react-three/drei": "^9.120.4",
     "@react-three/fiber": "^8.17.10",
+    "html2canvas": "^1.4.1",
     "leva": "^0.9.35",
+    "lodash": "^4.17.21",
+    "maath": "^0.10.8",
     "primereact": "^10.8.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-responsive": "^10.0.0",
+    "react-scroll": "^1.9.0",
     "three": "^0.171.0"
   },
   "devDependencies": {
