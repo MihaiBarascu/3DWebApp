@@ -1,4 +1,3 @@
-import React from "react";
 import BallCanvas from "./Ball";
 import { useMediaQuery } from "react-responsive";
 
@@ -22,23 +21,25 @@ const Technologies = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   return (
-    <div className="container mx-auto ">
-      <h2 className="text-2xl font-bold text-center lg:mt-10 mb-4">
-        Technologies I Work With
-      </h2>
-      <p className="text-center text-l  max-w-[500px] mx-auto">
-        These are some of the technologies I use in my projects, including
-        frameworks, programming languages, and other related tools.
-      </p>
-      <div className="grid grid-cols-3  md:grid-cols-4 xl:grid-cols-6 lg:gap-10  lg:mt-16">
-        {icons.map((icon, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <BallCanvas icon={icon.src} isMobile={isMobile} />
-            {!isMobile && <p className="m-0 text-center">{icon.name}</p>}
-          </div>
-        ))}
+    <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-r from-blue-950 via-blue-700 to-blue-950 text-white py-16">
+      <div className="container mx-auto ">
+        <h2 className="text-2xl font-bold text-center lg:mt-10 mb-4">
+          Technologies I Work With
+        </h2>
+        <p className="text-center text-l  max-w-[500px] mx-auto">
+          These are some of the technologies I use in my projects, including
+          frameworks, programming languages, and other related tools.
+        </p>
+        <div className="grid grid-cols-3  md:grid-cols-4 xl:grid-cols-6 lg:gap-10  lg:mt-16">
+          {icons.map((icon, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <BallCanvas icon={icon.src} isMobile={isMobile} />
+              {!isMobile && <p className="m-0 text-center">{icon.name}</p>}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

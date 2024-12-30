@@ -1,47 +1,81 @@
-import React from "react";
+import { Card } from "primereact/card"; // Importing the PrimeReact Card component
 
 const About = () => {
   return (
-    <section
-      className="min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-r from-purple-950 via-purple-700 to-purple-950 text-white py-16"
-      aria-labelledby="about-heading"
-    >
-      <div className="text-left px-6 max-w-2xl mx-auto">
-        <h2
-          id="about-heading"
-          className="text-2xl font-bold mb-8 text-white tracking-wide drop-shadow-lg"
+    <section className="min-h-screen w-full bg-gradient-to-r flex flex-col justify-center from-blue-800 via-indigo-700 to-purple-900 text-slate-600 py-12 px-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 items-center  ">
+        <Card
+          title="About Me"
+          className="shadow-2xl bg-transparent p-6  lg:max-w-xl ml-auto  col-span-2 lg:col-span-1  
+
+          hover:scale-110
+          
+          hover:bg-indigo-900 duration-1000 lg:hover:translate-x-1/4"
         >
-          About Me
-        </h2>
-        <p
-          style={{ textShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)" }}
-          className="text-lg md:text-xl leading-relaxed mb-8 text-gray-100 drop-shadow-md"
+          <p className="text-md lg:text-lg leading-relaxed mb-6 text-gray-100 ">
+            I&apos;m a developer with experience in both front-end and back-end.
+            I manage the entire process for both layers, creating user
+            experiences and building server-side systems.
+          </p>
+          <p className="text-md lg:text-lg leading-relaxed mb-6 text-gray-200">
+            Throughout my journey as a developer, I’ve realized that nothing is
+            more rewarding than seeing a functional product come to life.
+            Overcoming challenges, whether it&apos;s debugging tricky issues or
+            solving unexpected roadblocks, gives me a deep sense of
+            accomplishment and fuels my passion for coding.
+          </p>
+        </Card>
+
+        <Card
+          title="Most Recent Project"
+          subTitle="Unified Product Data Import System"
+          className="shadow-2xl bg-transparent p-6 max-w-full  col-span-3  lg:col-span-2 mx-auto lg:max-w-6xl
+           hover:scale-110
+          
+          hover:bg-indigo-900 duration-700 lg:hover:-translate-x-1/4"
         >
-          Hello, I'm Mihai, a passionate developer with a strong enthusiasm for
-          both <span className="font-bold">front-end</span> and{" "}
-          <span className="font-bold">back-end</span> development. I enjoy
-          working on all aspects of web development, from building intuitive
-          user interfaces to creating powerful, efficient server-side systems.
-        </p>
-        <p
-          style={{ textShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)" }}
-          className="text-lg md:text-xl leading-relaxed mb-8 text-gray-200 drop-shadow-md"
-        >
-          Throughout my journey as a developer, I’ve realized that nothing is
-          more rewarding than seeing a functional product come to life.
-          Overcoming challenges, whether it's debugging tricky issues or solving
-          unexpected roadblocks, gives me a deep sense of accomplishment and
-          fuels my passion for coding.
-        </p>
-        <p
-          style={{ textShadow: "2px 2px 5px rgba(0, 0, 0, 0.2)" }}
-          className="text-lg md:text-xl leading-relaxed mb-8 text-gray-200 drop-shadow-md"
-        >
-          Currently, I am focused on improving my knowledge in full-stack
-          development, continually learning and applying my skills in real-world
-          projects. I'm excited to keep progressing and to face new challenges
-          that come my way.
-        </p>
+          <p className="text-md lg:text-lg leading-relaxed mb-6 text-gray-200">
+            For this project, my role was to develop both the backend and the
+            frontend of a system that enables users to import and export product
+            data in various formats and define the structure of exported data.
+            This system is particularly useful for online e-commerce platforms
+            where products come from multiple suppliers and need to be
+            standardized into a unified format.
+          </p>
+
+          <p className="text-md lg:text-lg leading-relaxed mb-6 text-gray-200">
+            I implemented a role and permission-based system that allows users
+            to have different access levels. Additionally, I developed full
+            access management functionality, enabling admins to manage user
+            profiles, assign roles, and control permission levels, ensuring that
+            each user only has access to the relevant parts of the system.
+          </p>
+
+          <p className="text-md lg:text-lg leading-relaxed mb-6 text-gray-200">
+            Moreover, I added support for dynamically creating new import types,
+            providing users with the flexibility to define custom import
+            templates that can be reused for various product data formats. I
+            implemented functionality for dynamically mapping columns, setting
+            data types, saving, and exporting product data in CSV format. I also
+            implemented a revision system that enables admins to track and
+            review changes made to the system. This includes recording
+            modifications to user profiles, roles, permissions, and import
+            types, ensuring an audit trail for enhanced transparency and
+            accountability.
+          </p>
+
+          <p className="text-md lg:text-lg leading-relaxed mb-6 text-gray-200">
+            Some of the technologies I used include TypeScript, NestJS, MySQL,
+            TypeORM, RabbitMQ, MongoDB, MinIO, BullMQ, Redis, React, Redux,
+            Tailwind CSS, Socket.IO, Docker, and Git.
+          </p>
+
+          <p className="text-md lg:text-lg leading-relaxed mb-6 text-gray-200">
+            This project has been an incredible learning experience, and I have
+            greatly enjoyed collaborating with a talented team, which has
+            contributed to my personal and professional growth.
+          </p>
+        </Card>
       </div>
     </section>
   );

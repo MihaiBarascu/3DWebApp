@@ -1,52 +1,48 @@
 import { Menubar } from "primereact/menubar";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll } from "react-scroll";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Work from "./components/Work";
-const items = [
-  {
-    label: "Home",
-    command: (event) => {
-      event.originalEvent.preventDefault();
-
-      scroll.scrollToTop({
-        duration: 500,
-        smooth: "easeInOutQuad",
-      });
-    },
-  },
-  {
-    label: "About",
-    command: () => {
-      scroll.scrollTo(window.innerHeight, {
-        duration: 500,
-        smooth: "easeInOutQuad",
-      });
-    },
-  },
-  {
-    label: "Work",
-    command: () => {
-      scroll.scrollTo(window.innerHeight * 2, {
-        duration: 500,
-        smooth: "easeInOutQuad",
-      });
-    },
-  },
-  {
-    label: "Contact",
-    command: () => {
-      scroll.scrollTo("contact-section", {
-        duration: 500,
-        smooth: "easeInOutQuad",
-      });
-    },
-  },
-];
+import Technologies from "./components/Technologies";
+import { useMediaQuery } from "react-responsive";
 
 const start = <span className="font-semibold ml-4 pt-10">Mihai B.</span>;
 
 function App() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  const items = [
+    {
+      label: "Home",
+      command: (event) => {
+        event.originalEvent.preventDefault();
+
+        scroll.scrollToTop({
+          duration: 800,
+          smooth: "easeInOutQuad",
+        });
+      },
+    },
+    {
+      label: "About",
+      command: () => {
+        scroll.scrollTo(window.innerHeight, {
+          duration: 800,
+          smooth: "easeInOutQuad",
+        });
+      },
+    },
+    {
+      label: "Technologies",
+      command: () => {
+        scroll.scrollTo(
+          isMobile ? window.innerHeight * 3 : window.innerHeight * 2,
+          {
+            duration: 1000,
+            smooth: "easeInOutQuad",
+          }
+        );
+      },
+    },
+  ];
   return (
     <>
       <Menubar
@@ -59,7 +55,7 @@ function App() {
             className: "ml-auto",
           },
         }}
-        className="fixed w-full top-0 left-0 z-50 rounded-none max-h-12"
+        className="fixed w-full top-0 left-0 z-50 rounded-none max-h-12 opacity-90"
         model={items}
         start={start}
       ></Menubar>
@@ -67,7 +63,7 @@ function App() {
       <Hero />
 
       <About />
-      <Work />
+      <Technologies />
     </>
   );
 }
