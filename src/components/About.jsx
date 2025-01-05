@@ -1,38 +1,22 @@
+import { PerspectiveCamera } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import { Card } from "primereact/card"; // Importing the PrimeReact Card component
+import Laptop from "./Laptop";
+import { useMediaQuery } from "react-responsive";
 
 const About = () => {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+
   return (
-    <section className="min-h-screen w-full bg-gradient-to-r flex flex-col justify-center from-blue-800 via-indigo-700 to-purple-900 text-slate-600 py-12 px-4">
+    <section className="min-h-screen w-full bg-gradient-to-r flex flex-col relative justify-center from-blue-800 via-indigo-700 to-purple-900 text-slate-600 py-12 px-4">
       <div className="grid grid-cols-1 md:grid-cols-3 items-center  ">
-        <Card
-          title="About Me"
-          className="shadow-2xl bg-transparent p-6  lg:max-w-xl ml-auto  col-span-2 lg:col-span-1  
-
-          hover:scale-110
-          
-          hover:bg-indigo-900 duration-1000 lg:hover:translate-x-1/4"
-        >
-          <p className="text-md lg:text-lg leading-relaxed mb-6 text-gray-100 ">
-            I&apos;m a developer with experience in both front-end and back-end.
-            I manage the entire process for both layers, creating user
-            experiences and building server-side systems.
-          </p>
-          <p className="text-md lg:text-lg leading-relaxed mb-6 text-gray-200">
-            Throughout my journey as a developer, I’ve realized that nothing is
-            more rewarding than seeing a functional product come to life.
-            Overcoming challenges, whether it&apos;s debugging tricky issues or
-            solving unexpected roadblocks, gives me a deep sense of
-            accomplishment and fuels my passion for coding.
-          </p>
-        </Card>
-
         <Card
           title="Most Recent Project"
           subTitle="Unified Product Data Import System"
-          className="shadow-2xl bg-transparent p-6 max-w-full  col-span-3  lg:col-span-2 mx-auto lg:max-w-6xl
-           hover:scale-110
+          className="shadow-2xl bg-transparent p-6 max-w-full  col-span-3  lg:col-span-2 mx-auto lg:max-w-4xl
+       
           
-          hover:bg-indigo-900 duration-700 lg:hover:-translate-x-1/4"
+          "
         >
           <p className="text-md lg:text-lg leading-relaxed mb-6 text-gray-200">
             For this project, my role was to develop both the backend and the
@@ -69,13 +53,22 @@ const About = () => {
             TypeORM, RabbitMQ, MongoDB, MinIO, BullMQ, Redis, React, Redux,
             Tailwind CSS, Socket.IO, Docker, and Git.
           </p>
-
-          <p className="text-md lg:text-lg leading-relaxed mb-6 text-gray-200">
-            This project has been an incredible learning experience, and I have
-            greatly enjoyed collaborating with a talented team, which has
-            contributed to my personal and professional growth.
-          </p>
         </Card>
+
+        {!isMobile && (
+          <div className="ml-96 w-full h-full absolute inset-0 ">
+            <Canvas className="h-full w-full">
+              <PerspectiveCamera makeDefault position={[0, 3, 10]} />
+              <ambientLight intensity={20} />
+              <directionalLight position={[10, 10, 5]} intensity={20} />
+              <Laptop
+                scale={20}
+                position={[1, 0, 0]}
+                rotation={[0.1, -0.1, 0]}
+              />
+            </Canvas>
+          </div>
+        )}
       </div>
     </section>
   );

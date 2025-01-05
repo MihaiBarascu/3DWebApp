@@ -11,7 +11,7 @@ const icons = [
   { src: "images/tailwind.png", name: "Tailwind CSS" },
   { src: "images/mysql.png", name: "MySQL" },
   { src: "images/git.png", name: "Git" },
-  { src: "images/typeorm.png", name: "TypeORM" },
+  // { src: "images/typeorm.png", name: "TypeORM" },
   { src: "images/mongo.png", name: "MongoDB" },
   { src: "images/redux.png", name: "Redux" },
   { src: "images/express.png", name: "Express.js" },
@@ -23,7 +23,7 @@ const Technologies = () => {
   return (
     <section className="min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-r from-blue-950 via-blue-700 to-blue-950 text-white py-16">
       <div className="container mx-auto ">
-        <h2 className="text-2xl font-bold text-center lg:mt-10 mb-4">
+        <h2 className="text-2xl font-bold text-center  mb-4">
           Technologies I Work With
         </h2>
         <p className="text-center text-l  max-w-[500px] mx-auto">

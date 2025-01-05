@@ -22,7 +22,7 @@ function App() {
       },
     },
     {
-      label: "About",
+      label: "Technologies",
       command: () => {
         scroll.scrollTo(window.innerHeight, {
           duration: 800,
@@ -31,15 +31,12 @@ function App() {
       },
     },
     {
-      label: "Technologies",
+      label: "Project",
       command: () => {
-        scroll.scrollTo(
-          isMobile ? window.innerHeight * 3 : window.innerHeight * 2,
-          {
-            duration: 1000,
-            smooth: "easeInOutQuad",
-          }
-        );
+        scroll.scrollTo(window.innerHeight * 2, {
+          duration: 800,
+          smooth: "easeInOutQuad",
+        });
       },
     },
   ];
@@ -62,8 +59,8 @@ function App() {
 
       <Hero />
 
-      <About />
       <Technologies />
+      <About />
     </>
   );
 }
